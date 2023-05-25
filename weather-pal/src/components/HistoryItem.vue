@@ -1,21 +1,27 @@
 <script setup lang="ts">
 import type { IPlace } from '@/interface/internal';
-import { showWeather, useWeatherStore } from '@/services/weather';
+import { getWeather, getForecast, useWeatherStore } from '@/services/weather';
 import { useHistoryStore } from '@/services/history';
 
+// state stores
 const wstore = useWeatherStore();
 const hstore = useHistoryStore();
+// item props
 const props = defineProps<{item: IPlace}>();
 
+/**
+ * Execute history button search. 
+ * @param evt 
+ */
 function doSearch(evt:MouseEvent) {
     if(props.item) {
-        showWeather(props.item)
+        getWeather(props.item)
         .then(result => {
-            if(result) {
                 hstore.addItem(props.item);
-                wstore.setCurrent(result);
-            }
+                wstore.setWeather(result);
         });
+        getForecast(props.item)
+        .then(wstore.setForecast);
     }
 }
 </script>

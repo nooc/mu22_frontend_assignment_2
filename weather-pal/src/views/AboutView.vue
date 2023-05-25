@@ -4,8 +4,8 @@
     <p>This weather app is a school assignment. The purpose is to write an VUE weather application with the following requirements:</p>
     <ul>
       <li>Search history with up to three entries.</li>
-      <li>Search bar with timer blur/trigger.</li>
-      <li>Search results showing current weather and hourly forecast.</li>
+      <li>Search bar with timer, blur and submit trigger.</li>
+      <li>Search results showing current weather and hourly (3h) forecast.</li>
     </ul>
   </div>
 </template>

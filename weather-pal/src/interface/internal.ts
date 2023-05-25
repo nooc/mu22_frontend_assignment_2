@@ -1,6 +1,4 @@
-import type { ForecastResponse } from "./openweathermap";
-
-// simple place interface
+// NMy simple place interface.
 export interface IPlace {
     name:string;
     lat:number;

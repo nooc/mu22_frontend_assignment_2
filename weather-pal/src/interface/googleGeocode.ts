@@ -1,3 +1,7 @@
+/**
+ * Google geocode response interface.
+ * Tool used: https://transform.tools/json-to-typescript
+ */
 export type GeocodeResponse = {
     results: Array<{
       address_components: Array<{

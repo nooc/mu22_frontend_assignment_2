@@ -1,20 +1,14 @@
 <script setup lang="ts">
-import { onMounted, ref, type Ref } from 'vue';
 import HistoryBar from './HistoryBar.vue';
 import SearchBar from './SearchBar.vue';
 import CurrentWeather from './CurrentWeather.vue';
 import HourlyForecast from './HourlyForecast.vue';
-import { findPlace, showWeather, useWeatherStore } from '@/services/weather';
+import { useWeatherStore, SetInitialWeather } from '@/services/weather';
 
+// state store
 const wstore = useWeatherStore();
-
-onMounted(() => {
-  findPlace('').then(showWeather).then(result => {
-    wstore.setCurrent(result);
-  }).catch(() => {
-    console.log('no location');
-  });
-});
+// try getting initial location from browser
+SetInitialWeather(wstore);
 </script>
 
 <template>

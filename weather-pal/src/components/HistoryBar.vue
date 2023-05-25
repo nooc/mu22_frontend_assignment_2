@@ -1,8 +1,8 @@
 <script setup lang="ts">
-
 import HistoryItem from './HistoryItem.vue'
 import { useHistoryStore } from '@/services/history';
 
+// state store
 const hstore = useHistoryStore();
 
 </script>

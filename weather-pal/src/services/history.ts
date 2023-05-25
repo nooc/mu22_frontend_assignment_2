@@ -9,7 +9,6 @@ export const useHistoryStore = defineStore('history', () => {
   const historyRef = ref(new Array<IPlace>());
   // get saved state
   let jsonState = localStorage.getItem(STORE_KEY);
-  console.log(jsonState);
   if(jsonState != null) {
     let savedSearches = JSON.parse(jsonState);
     historyRef.value.push(...savedSearches);

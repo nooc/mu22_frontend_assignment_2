@@ -37,6 +37,7 @@
   min-height: 10px;
   margin-top: 10px;
   padding: 5px;
+  border-radius: 5px;
 }
 input, button {
   font-size: 1.1em;
