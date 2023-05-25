@@ -17,4 +17,7 @@ then run:
 	> npm run dev
 
 
+## NOTES
 
+Api keys may or may not work and are temporary. I erase them when this assignment is completed.
+Keys reside in .env inside the weather-pal folder.

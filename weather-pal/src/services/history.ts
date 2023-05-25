@@ -1,3 +1,6 @@
+/**
+ * Search history service using pinia.
+ */
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 import type { IPlace } from '@/interface/internal';
