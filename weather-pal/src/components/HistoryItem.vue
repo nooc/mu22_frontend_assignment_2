@@ -37,5 +37,7 @@ function doSearch(evt:MouseEvent) {
     padding: 0.3em;
     border: 1px solid var(--color-border);
     text-align: center;
+    background-color: var(--vt-c-black-mute);
+    color: var(--color-text-clear);
 }
 </style>

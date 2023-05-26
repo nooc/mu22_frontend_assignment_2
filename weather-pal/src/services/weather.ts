@@ -27,6 +27,7 @@ export async function findPlace(query: string): Promise<IPlace> {
     // google geocode api
     return axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${query}&key=${import.meta.env.VITE_GOOGLE_APIS_KEY}`)
         .then(result => {
+            console.log(result.data);
             if (result.data.status === 'OK' && result.data.results.length > 0) {
                 let d = result.data.results[0];
                 return { name: query, lat: d.geometry.location.lat, lon: d.geometry.location.lng };
